@@ -30,7 +30,7 @@ export class VerPaisComponent implements OnInit {
     //RECOMENDADISIMA USAR SWITCHMAP
     this.activatedRoute.params
       .pipe(
-        switchMap( ({ id }) => this.paisService.getPaisPorCodigo(id)),
+        switchMap( ({ id }) => this.paisService.getPaisPorAlpha(id)),
         tap(console.log)
       ).subscribe(pais => {
         this.pais = pais;
